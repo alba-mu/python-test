@@ -34,7 +34,7 @@ def test_replace():
     """replace() should change passed in fields."""
 
     task = Task('finish book', 'brian', False)
-
-    # your code
+    task = task._replace(done=True)
+    expected = Task('finish book', 'brian', True)
 
     assert task == expected
