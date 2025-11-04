@@ -31,14 +31,10 @@ def test_asdict():
     assert dict == expected
 
 def test_replace():
+    """replace() should change passed in fields."""
 
-   Person = namedtuple('Person', ['name', 'age', 'location', 'profession'])
+    task = Task('finish book', 'brian', False)
 
-   mike = Person('Mike', 33, 'Toronto', 'Veterinari')
-   assert mike.age == 33
+    # your code
 
-   newMike = mike._replace(age=44)
-   assert newMike.age == 44
-
-   assert mike.age == 33
-   assert mike.age != newMike.age
+    assert task == expected
